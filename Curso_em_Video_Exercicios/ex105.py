@@ -1,27 +1,32 @@
 def notas(*n):
     lista = [n]
     condicao = []
+    respostas = dict()
     soma = 0
     for i in lista[0]:
         soma += i
-    quantidade = len(lista)
-    maior = max(lista)
-    menor = min(lista)
+    quantidade = len(lista[0])
+    maior = max(lista[0])
+    menor = min(lista[0])
     media = soma/quantidade
+
+    c = 0
     for i in lista[0]:
         if i < 50:
-            condicao.append(f'Aluno {i+1}-REPROVADO')
+            condicao.append(f'Aluno {c+1}-REPROVADO')
         elif i < 70:
-            condicao.append(f'Aluno {i+1}-RECUPERAÇÃO')
+            condicao.append(f'Aluno {c+1}-RECUPERAÇÃO')
         elif i <= 100:
-            condicao.append(f'Aluno {i+1}-APROVADO')
+            condicao.append(f'Aluno {c+1}-APROVADO')
         else:
             condicao.append('<nota fora do range>')
-    respostas = [f'Foram catalogadas {quantidade} notas',
-                 f'A maior nota foi {maior}',
-                 f'A menor nota foi {menor}',
-                 f'A média foi {media}',
-                 condicao]
+        c += 1
+
+    respostas['Quantidade'] = quantidade
+    respostas['Maior Nota'] = maior
+    respostas['Menor Nota'] = menor
+    respostas['Media das Notas'] = media
+    respostas['Condição'] = condicao
     return respostas
 
 print(notas(23,85,65,25,98,75,65,42,32,13,2,23,56,67,89,57,87,87,99,100))
