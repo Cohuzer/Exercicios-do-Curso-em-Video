@@ -1,0 +1,6 @@
+n = str(input('Qual seu nome? ')).strip()
+print('Esse é seu nome escrito apenas com letras maiúsculas {}'.format(n.upper()))
+print('Esse é o seu nome escrito apenas com letras minúsculas {}'.format(n.lower()))
+print('Seu nome tem {} letras'.format(len(n) - n.count(' ')))
+s = n.split()
+print('Seu primeiro nome é {} e tem {} letras'.format(s[0], len(s[0])))
