@@ -4,6 +4,3 @@ def leiaInt(n):
         return True
     else:
         return False
-
-
-while not n:
