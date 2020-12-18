@@ -3,11 +3,12 @@ def voto(nasc):
     hoje = date.today().year
     idade = hoje - nasc
     if 16 < idade < 70:
-        return [idade, "Obrigatorio"]
+        situacao = "Obrigatorio"
     elif idade > 70:
-        return [idade, "Opicional"]
+        situacao = "Opicional"
     else:
-        return [idade, "Negado"]
+        situacao = "Negado"
+    return [idade, situacao]
 
 
 nasc = int(input('Insira seu ano de nascimento: '))
