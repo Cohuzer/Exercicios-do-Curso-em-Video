@@ -2,7 +2,7 @@ def fatorial(numero, show=False):
     """
     => Essa função calcula o fatorial de um número;
     :param numero: número a ser fatorado
-    :param show: booleano que escolhe mostrar o processo de fatoração ou não
+    :param show: (opcional) booleano que escolhe mostrar o processo de fatoração ou não
     :return: resultado do fatorial
     """
     soma = 1
