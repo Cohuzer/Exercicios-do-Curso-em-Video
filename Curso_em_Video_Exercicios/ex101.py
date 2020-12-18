@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import date
 
 
 def voto(idade):
@@ -10,8 +10,8 @@ def voto(idade):
         return "Negado"
 
 
-hoje = datetime().today().year
+hoje = date.today().year
 nasc = int(input('Insira seu ano de nascimento: '))
 idade = hoje - nasc
 
-print(f'A situação do seu voto é {voto(idade)}')
+print(f'Com {idade} anos a situação do seu voto é {voto(idade)}')
