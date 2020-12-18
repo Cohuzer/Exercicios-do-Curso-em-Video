@@ -1,4 +1,10 @@
 def notas(*n, sit=False):
+    """
+    => A função analisa as notas de um número não fixo de notas
+    :param n: notas dos alunos (Tupla);
+    :param sit: Booleano para definir aparição ou não da situação de cada aluno;
+    :return: retorna a quantidade de notas cadastradas, maior e menor nota, média e situação.
+    """
     lista = [n]
     condicao = []
     respostas = dict()
