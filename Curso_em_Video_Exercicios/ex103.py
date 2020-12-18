@@ -13,4 +13,4 @@ dicionario = ficha(nome, gols)
 
 for i in dicionario.keys():
     for j in dicionario.values():
-        print(f'O jogador {i} fez {j} gols')
+        print(f'O jogador {i} fez {j} gol(s) no campeonato')
