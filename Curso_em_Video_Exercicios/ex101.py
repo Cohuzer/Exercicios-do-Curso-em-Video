@@ -1,17 +1,15 @@
-from datetime import date
-
-
-def voto(idade):
+def voto(nasc):
+    from datetime import date
+    hoje = date.today().year
+    idade = hoje - nasc
     if 16 < idade < 70:
-        return "Obrigatorio"
+        return [idade, "Obrigatorio"]
     elif idade > 70:
-        return "Opicional"
+        return [idade, "Opicional"]
     else:
-        return "Negado"
+        return [idade, "Negado"]
 
 
-hoje = date.today().year
 nasc = int(input('Insira seu ano de nascimento: '))
-idade = hoje - nasc
-
-print(f'Com {idade} anos a situação do seu voto é {voto(idade)}')
+votos = voto(nasc)
+print(f'Com {votos[0]} anos a situação do seu voto é {votos[1]}')
