@@ -7,8 +7,18 @@ def ficha(nome=None, gols=None):
     dicionario[nome] = gols
     return dicionario
 
-nome = str(input('Nome do jogador: '))
-gols = int(input('Gols do jogador: '))
+
+nome = str(input('Nome do jogador: ')).strip()
+gols = str(input('Gols do jogador: ')).strip()
+
+if gols.isnumeric():
+    gols = int(gols)
+else:
+    gols = None
+
+if nome == '':
+    nome = None
+
 dicionario = ficha(nome, gols)
 
 for i in dicionario.keys():
