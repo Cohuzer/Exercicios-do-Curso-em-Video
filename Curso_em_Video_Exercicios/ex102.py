@@ -1,4 +1,10 @@
 def fatorial(numero, show=False):
+    """
+    => Essa função calcula o fatorial de um número;
+    :param numero: número a ser fatorado
+    :param show: booleano que escolhe mostrar o processo de fatoração ou não
+    :return: resultado do fatorial
+    """
     soma = 1
     numero += 1
     if show:
@@ -19,3 +25,4 @@ entrada = int(input('Número a ser fatorado: '))
 print(f'A fatorial de {entrada} é {fatorial(entrada)}')
 print('-*'*20)
 print(f'A fatorial de {entrada} é {fatorial(entrada, show=True)}')
+help(fatorial)
