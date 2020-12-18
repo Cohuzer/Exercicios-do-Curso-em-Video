@@ -33,8 +33,7 @@ def notas(*n, sit=False):
     respostas['Maior Nota'] = maior
     respostas['Menor Nota'] = menor
     respostas['Media das Notas'] = media
-    if sit:
-        respostas['Condição'] = condicao
+    if sit: respostas['Condição'] = condicao
 
     return respostas
 
