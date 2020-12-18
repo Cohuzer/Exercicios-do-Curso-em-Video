@@ -2,9 +2,9 @@ def voto(nasc):
     from datetime import date
     hoje = date.today().year
     idade = hoje - nasc
-    if 16 < idade < 70:
+    if 18 <= idade < 65:
         situacao = "Obrigatorio"
-    elif idade > 70:
+    elif idade > 65 or 16 <= idade < 18:
         situacao = "Opicional"
     else:
         situacao = "Negado"
