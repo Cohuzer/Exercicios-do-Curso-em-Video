@@ -41,7 +41,7 @@ def notas(*n, sit=False):
     respostas['Quantidade'] = quantidade
     respostas['Maior Nota'] = maior
     respostas['Menor Nota'] = menor
-    respostas['Media das Notas'] = media
+    respostas['Media das Notas'] = f'{media:.2f}'
     if sit:
         respostas['Condição'] = condicao
         respostas['Condição Geral'] = condicaogeral
