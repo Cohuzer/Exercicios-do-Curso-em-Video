@@ -29,14 +29,16 @@ def notas(*n, sit=False):
             else:
                 condicao.append('<nota fora do range>')
             c += 1
-        if media < 50:
+        if -1 < media < 50:
             condicaogeral = f'PÉSSIMA - {media:.2f}'
         elif media < 70:
             condicaogeral = f'RUIM - {media:.2f}'
+        elif media < 90:
+            condicaogeral = f'ACEITAVEL - {media:.2f}'
         elif media < 100:
-            condicaogeral = f'ÓTIMA - {media:.2f}'
+            condicaogeral = f'BOA - {media:.2f}'
         else:
-            condicaogeral = f'ERRO - {media:.2f}'
+            condicaogeral = 'ERRO'
 
     respostas['Quantidade'] = quantidade
     respostas['Maior Nota'] = maior
