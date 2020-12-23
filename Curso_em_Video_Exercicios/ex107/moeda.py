@@ -14,3 +14,5 @@ def dobro(n):
 
 def metade(n):
     return n/2
+
+#Funções do exercicio 107
