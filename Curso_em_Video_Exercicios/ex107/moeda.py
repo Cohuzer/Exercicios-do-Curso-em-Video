@@ -17,6 +17,6 @@ def metade(n):
 
 #Funções do exercicio 107
 
-def mostraMoeda (n):
+def moeda (n):
     return (f'R${n:.2f}').replace('.', ',')
 #Função do exercicio 108
