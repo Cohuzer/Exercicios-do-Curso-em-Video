@@ -1,22 +1,38 @@
-def aumentar(numero, porcentagem):
+def aumentar(numero, porcentagem, sit=False):
     resultado = numero + ((porcentagem / 100) * numero)
-    return resultado
+    if sit:
+        resultadoFormatado = moeda(resultado)
+        return resultadoFormatado
+    else:
+        return resultado
 
 
-def diminuir(numero, porcentagem):
+def diminuir(numero, porcentagem, sit=False):
     resultado = numero - ((porcentagem / 100) * numero)
-    return resultado
+    if sit:
+        resultadoFormatado = moeda(resultado)
+        return resultadoFormatado
+    else:
+        return resultado
 
 
-def dobro(numero):
+def dobro(numero, sit=False):
     resultado = numero * 2
-    return resultado
+    if sit:
+        resultadoFormatado = moeda(resultado)
+        return resultadoFormatado
+    else:
+        return resultado
 
 
-def metade(numero):
+def metade(numero, sit=False):
     resultado = numero / 2
-    return resultado
+    if sit:
+        resultadoFormatado = moeda(resultado)
+        return resultadoFormatado
+    else:
+        return resultado
 
-def moeda(funcao):
-    textoFormatado = f'R${funcao:.2f}'.replace('.', ',')
+def moeda(numero):
+    textoFormatado = f'R${numero:.2f}'.replace('.', ',')
     return textoFormatado
