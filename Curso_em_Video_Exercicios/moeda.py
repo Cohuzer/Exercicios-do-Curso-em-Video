@@ -16,3 +16,7 @@ def dobro(numero):
 def metade(numero):
     resultado = numero / 2
     return resultado
+
+def moeda(funcao):
+    textoFormatado = f'R${funcao:.2f}'.replace('.', ',')
+    return textoFormatado
