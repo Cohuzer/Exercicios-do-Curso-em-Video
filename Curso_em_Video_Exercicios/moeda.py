@@ -1,5 +1,5 @@
 def aumentar(numero, porcentagem):
-    resultado = numero - ((porcentagem / 100) * numero)
+    resultado = numero + ((porcentagem / 100) * numero)
     return resultado
 
 
