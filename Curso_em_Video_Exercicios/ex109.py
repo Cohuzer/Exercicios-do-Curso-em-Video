@@ -1,6 +1,6 @@
 import moeda
 
-num = 100
+num = float(input('Digite um preço R$'))
 por = 40
 
 print(f'Aumentar = {moeda.aumentar(num, por, sit=True)};\n'
